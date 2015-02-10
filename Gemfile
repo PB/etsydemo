@@ -30,6 +30,8 @@ gem "paperclip", "~> 4.2"
 gem "paperclip-dropbox", ">= 1.1.7"
 # Figaro was written to make it easy to securely configure Rails applications.
 gem "figaro"
+# Devise is a flexible authentication solution for Rails based on Warden
+gem 'devise'
 
 
 # Makes running your Rails app easier.
