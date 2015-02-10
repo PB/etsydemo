@@ -26,6 +26,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3.3'
 # Paperclip is intended as an easy file attachment library for Active Record.
 gem "paperclip", "~> 4.2"
+# This gem extends Paperclip with Dropbox storage.
+gem "paperclip-dropbox", ">= 1.1.7"
+# Figaro was written to make it easy to securely configure Rails applications.
+gem "figaro"
 
 
 # Makes running your Rails app easier.
