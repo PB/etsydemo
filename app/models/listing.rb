@@ -1,6 +1,6 @@
 class Listing < ActiveRecord::Base
   if Rails.env.development?
-      has_attached_file :image, :styles => { :medium => "200x", :thumb => "100x100>" }, :default_url => "default-no-image.png"
+    has_attached_file :image, :styles => { :medium => "200x", :thumb => "100x100>" }, :default_url => "default-no-image.png"
   else
     has_attached_file :image, :styles => { :medium => "200x", :thumb => "100x100>" }, :default_url => "default-no-image.png",
                       :storage => :dropbox,
@@ -11,4 +11,6 @@ class Listing < ActiveRecord::Base
   validates :name, :description, :price, presence: true
   validates :price, numericality: { greater_than: 0 }
   validates_attachment_presence :image
+
+  belongs_to :user
 end
